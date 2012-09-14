@@ -1,5 +1,5 @@
 //
-//  ParseBackedModelTests.m
+//  OEGParseBackedModelTests.m
 //  ParseBackedModel
 //
 //  Created by Anders Carlsson on 2012-05-27.
@@ -7,10 +7,10 @@
 //
 
 #import <Parse/Parse.h>
-#import "ParseBackedModelTests.h"
-#import "ParseBackedModel.h"
+#import "OEGParseBackedModelTests.h"
+#import "OEGParseBackedModel.h"
 
-@interface Model : ParseBackedModel
+@interface Model : OEGParseBackedModel
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSNumber *awesomenessRating;
 @property (nonatomic) NSString *URLString;
@@ -23,7 +23,7 @@
 @end
 
 
-@implementation ParseBackedModelTests {
+@implementation OEGParseBackedModelTests {
   Model *model;
 }
 

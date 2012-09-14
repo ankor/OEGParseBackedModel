@@ -1,5 +1,5 @@
 //
-//  ParseBackedModel.h
+//  OEGParseBackedModel.h
 //  ParseBackedModel
 //
 //  Created by Anders Carlsson on 2012-05-27.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <Parse/Parse.h>
 
-@interface ParseBackedModel : NSObject
+@interface OEGParseBackedModel : NSObject
 
 @property (strong) PFObject *parseObject;
 

@@ -1,5 +1,5 @@
 //
-//  ParseBackedModelTests.h
+//  OEGParseBackedModelTests.h
 //  ParseBackedModel
 //
 //  Created by Anders Carlsson on 2012-05-27.
@@ -8,6 +8,6 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
-@interface ParseBackedModelTests : SenTestCase
+@interface OEGParseBackedModelTests : SenTestCase
 
 @end

@@ -1,5 +1,5 @@
 //
-//  ParseBackedModel.m
+//  OEGParseBackedModel.m
 //  ParseBackedModel
 //
 //  Created by Anders Carlsson on 2012-05-27.
@@ -7,9 +7,9 @@
 //
 
 #import <objc/runtime.h>
-#import "ParseBackedModel.h"
+#import "OEGParseBackedModel.h"
 
-@implementation ParseBackedModel
+@implementation OEGParseBackedModel
 
 @synthesize parseObject;
 
@@ -53,13 +53,13 @@
   if (property != NULL) {
     if (setter) {
       void (^setterBlock)(id, id) = ^(id _self, id newValue) {
-        [((ParseBackedModel *)_self).parseObject setObject:newValue forKey:propertyName];
+        [((OEGParseBackedModel *)_self).parseObject setObject:newValue forKey:propertyName];
       };
       IMP setterIMP = imp_implementationWithBlock((__bridge void *)setterBlock);
       class_addMethod(self, sel, setterIMP, "v@:@");
     } else {
       id (^getterBlock)(id) = ^(id _self) {
-        return [((ParseBackedModel *)_self).parseObject objectForKey:propertyName];
+        return [((OEGParseBackedModel *)_self).parseObject objectForKey:propertyName];
       };
       IMP getterIMP = imp_implementationWithBlock((__bridge void *)getterBlock);
       class_addMethod(self, sel, getterIMP, "@@:");
